@@ -1,0 +1,19 @@
+class Solution {
+public:
+//ved
+    int reverse(int x) {
+        long long int rev=0;
+        while(x!=0){
+            int rem=x%10;
+            rev=rev*10 + rem;
+             x=x/10;
+        }
+
+        if(rev>pow(2,31)-1 || rev<pow(-2,31)){
+            return 0;
+         }
+         else{
+            return rev;
+         }
+    }
+};
